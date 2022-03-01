@@ -26,7 +26,7 @@ airport_attrs = {
 airport_attrs.each { |ap, attrs| Airport.find_or_create_by(attrs) }
 
 
-flight_attrs1 = {
+flight_attrs = {
     flight1:  { flight_num: "A11641", date: "01 Mar 2022", time: "4:39 PM",  depart_airport_id: 4,  arrive_airport_id: 6  }, 
     flight2:  { flight_num: "D62481", date: "01 Mar 2022", time: "6:25 AM",  depart_airport_id: 7,  arrive_airport_id: 8  }, 
     flight3:  { flight_num: "G14031", date: "01 Mar 2022", time: "8:15 AM",  depart_airport_id: 2,  arrive_airport_id: 10 }, 
@@ -55,11 +55,7 @@ flight_attrs1 = {
     flight26: { flight_num: "A11642", date: "06 Mar 2022", time: "4:39 PM",  depart_airport_id: 4,  arrive_airport_id: 6  }, 
     flight27: { flight_num: "D62482", date: "06 Mar 2022", time: "6:25 AM",  depart_airport_id: 7,  arrive_airport_id: 8  }, 
     flight28: { flight_num: "G14032", date: "06 Mar 2022", time: "8:15 AM",  depart_airport_id: 2,  arrive_airport_id: 10 }, 
-    flight29: { flight_num: "E18042", date: "06 Mar 2022", time: "5:40 AM",  depart_airport_id: 6,  arrive_airport_id: 13 }
-}
-
-
-flight_attrs2 = {
+    flight29: { flight_num: "E18042", date: "06 Mar 2022", time: "5:40 AM",  depart_airport_id: 6,  arrive_airport_id: 13 }, 
     flight30: { flight_num: "K25802", date: "06 Mar 2022", time: "7:45 AM",  depart_airport_id: 8,  arrive_airport_id: 3  }, 
     flight31: { flight_num: "E74042", date: "07 Mar 2022", time: "8:46 AM",  depart_airport_id: 10, arrive_airport_id: 8  }, 
     flight32: { flight_num: "R25432", date: "07 Mar 2022", time: "9:13 AM",  depart_airport_id: 13, arrive_airport_id: 4  }, 
@@ -89,10 +85,7 @@ flight_attrs2 = {
     flight56: { flight_num: "E74043", date: "12 Mar 2022", time: "8:46 AM",  depart_airport_id: 7,  arrive_airport_id: 7  }, 
     flight57: { flight_num: "R25433", date: "12 Mar 2022", time: "9:13 AM",  depart_airport_id: 11, arrive_airport_id: 11 }, 
     flight58: { flight_num: "H18873", date: "12 Mar 2022", time: "5:40 AM",  depart_airport_id: 12, arrive_airport_id: 12 }, 
-    flight59: { flight_num: "K15043", date: "12 Mar 2022", time: "7:45 AM",  depart_airport_id: 3,  arrive_airport_id: 1  }
-}
-    
-flight_attrs3 = {   
+    flight59: { flight_num: "K15043", date: "12 Mar 2022", time: "7:45 AM",  depart_airport_id: 3,  arrive_airport_id: 1  }, 
     flight60: { flight_num: "D12873", date: "12 Mar 2022", time: "10:59 AM", depart_airport_id: 4,  arrive_airport_id: 5  }, 
     flight61: { flight_num: "G15703", date: "13 Mar 2022", time: "11:28 AM", depart_airport_id: 7,  arrive_airport_id: 7  }, 
     flight62: { flight_num: "V10373", date: "13 Mar 2022", time: "6:00 AM",  depart_airport_id: 2,  arrive_airport_id: 11 }, 
@@ -134,7 +127,4 @@ flight_attrs3 = {
     flight98: { flight_num: "F65485", date: "20 Mar 2022", time: "11:28 PM", depart_airport_id: 15, arrive_airport_id: 2  }, 
     flight99: { flight_num: "I46545", date: "20 Mar 2022", time: "7:23 PM",  depart_airport_id: 4,  arrive_airport_id: 7  }
 }
-
-flight_attrs1.each { |fl, attrs| Flight.find_or_create_by(attrs) }
-flight_attrs2.each { |fl, attrs| Flight.find_or_create_by(attrs) }
-flight_attrs3.each { |fl, attrs| Flight.find_or_create_by(attrs) }
+flight_attrs.each { |fl, attrs| Flight.find_or_create_by(attrs) }

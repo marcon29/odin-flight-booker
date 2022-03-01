@@ -1,13 +1,12 @@
 class Airport < ApplicationRecord
-    # has_many :departures
-    # has_many :arrivals
 
-    # has_many :departures, source: :depart_airport_id
-    # has_many :arrivals, source: :arrive_airport_id
-
+    has_many :departures, foreign_key: "depart_airport_id", class_name: "Flight"
+    has_many :arrivals, foreign_key: "arrive_airport_id", class_name: "Flight"
 
 
     def location
         self.city + ", " + self.state
     end
+
+    
 end

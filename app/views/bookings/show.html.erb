@@ -1,0 +1,8 @@
+<h1>Bookings#index</h1>
+<h2><%= @booking.confirmation %></h2>
+<p><%= @flight.display_text %></p>
+<ul> Passengers: 
+    <% @passengers.each do |pass| %>
+        <li><%= pass.name %></li>
+    <% end %>
+</ul>

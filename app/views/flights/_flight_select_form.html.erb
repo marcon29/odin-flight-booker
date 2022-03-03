@@ -1,7 +1,8 @@
 <h2>Flights#select</h2>
 
 
-<%= form_with model: @flight do |f| %>
+<%= form_with(model: @flight, url: new_booking_path, method: "get") do |f| %>
+    <%= f.hidden_field :num_passengers, value: @passenger_count %>
     <%= f.collection_radio_buttons :flight_id, @flights, :id, :display_text %>
-    <%= f.submit "Book Flight" %>
+    <%= f.submit "Select Flight" %>
 <% end %>

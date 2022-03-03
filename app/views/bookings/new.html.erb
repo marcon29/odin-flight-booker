@@ -1,7 +1,7 @@
 <h1>Bookings#new</h1>
 
 <%= form_with model: @booking do |f| %>
-    <%= f.hidden_field :confirmation, value: @booking.confirmation %>
+    <%= f.hidden_field :confirmation, value: @booking.create_booking_confirmation %>
     <%= f.hidden_field :flight_id, value: @booking.flight_id %>
         <%= f.fields_for :passengers do |f_pass| %>
             <%= f_pass.text_field  :name, placeholder: "Enter passenger name" %>

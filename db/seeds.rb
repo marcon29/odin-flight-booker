@@ -25,15 +25,6 @@ airport_attrs = {
 }
 airport_attrs.each { |ap, attrs| Airport.find_or_create_by(attrs) }
 
-
-# def random_time
-#     time = "#{rand(4..22)}:#{rand(0..60)}"
-#     if time.nil?
-#         random_time
-#     end
-#     time
-# end
-
 def random_time
     begin
         time = "#{rand(4..22)}:#{rand(0..60)}".to_time.strftime("%I:%M %p")

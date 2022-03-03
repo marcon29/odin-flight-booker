@@ -1,0 +1,7 @@
+<h2>Flights#select</h2>
+
+
+<%= form_with model: @flight do |f| %>
+    <%= f.collection_radio_buttons :flight_id, @flights, :id, :display_text %>
+    <%= f.submit "Book Flight" %>
+<% end %>

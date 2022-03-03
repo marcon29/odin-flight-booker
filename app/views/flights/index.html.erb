@@ -1,0 +1,18 @@
+<h1>Flights#Index</h1>
+
+
+<%= form_with url: flights_path, method: :get do |f| %>
+    <%= f.label :depart_airport_id, "Origin:" %>
+    <%= f.collection_select :depart_airport_id, @depart_airports, :id, :code_and_location %>
+        
+    <%= f.label :arrive_airport_id, "Destination:" %>
+    <%= f.collection_select :arrive_airport_id, @arrive_airports, :id, :code_and_location %>
+
+    <%= f.label :flights, "Passengers:" %>
+    <%= f.select :num_passengers, @num_passengers %>
+    
+    <%= f.label :date, "Travel Date:" %>
+    <%= f.date_field  :date %>
+
+    <%= f.submit "Find Flights" %>
+<% end %>

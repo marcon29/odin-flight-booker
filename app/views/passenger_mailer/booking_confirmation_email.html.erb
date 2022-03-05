@@ -1,5 +1,15 @@
-<h1>Passenger#booking_confirmation_email</h1>
+<h3>Hi, <%= @passenger.name %></h3>
 
-<p>
-  <%= @greeting %>, find me in app/views/passenger_mailer/booking_confirmation_email.html.erb
-</p>
+<p>Your flight to <%= @arrival.city %> is booked. Here are the details: </p>
+
+<p><b>Confirmation#: </b><%= @booking.confirmation %></p>
+<p><b>Flight Info: </b><%= @flight.display_text %></p>
+
+<% if @other_passengers.present? %>
+  <ul><b>Other Passengers on This Booking: </b>
+      <% @other_passengers.each do |pass| %>
+          <li><%= pass.name %></li>
+      <% end %>
+  </ul>
+<% end %>
+

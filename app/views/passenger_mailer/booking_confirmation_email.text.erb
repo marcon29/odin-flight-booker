@@ -1,3 +1,13 @@
-Passenger#booking_confirmation_email
+Hi, <%= @passenger.name %>
 
-<%= @greeting %>, find me in app/views/passenger_mailer/booking_confirmation_email.text.erb
+Your flight to <%= @arrival.city %> is booked. Here are the details:
+
+Confirmation#: <%= @booking.confirmation %>
+Flight Info: <%= @flight.display_text %>
+
+<% if @other_passengers.present? %>
+    Other Passengers on This Booking: 
+      <% @other_passengers.each do |pass| %>
+          <%= pass.name %>
+      <% end %>
+<% end %>
